@@ -9,7 +9,7 @@ plugin = lightbulb.Plugin("BusAPI")
 @lightbulb.command(name="businfo", description="Get the bus information of a company.")
 @lightbulb.implements(lightbulb.SlashCommand)
 async def businfo(ctx: lightbulb.SlashContext):
-    with open("The_API.json") as file:
+    with open("./commands/api/The_API.json") as file:
         try:
             upp = ctx.options.regplate.upper()
             nospace = upp.replace(" ", "")
